@@ -232,6 +232,8 @@ httpd.exe -k install
 
 httpd.exe -k start
 
+<img width="1077" height="555" alt="image" src="https://github.com/user-attachments/assets/61d3fabd-1d5c-4a09-9b03-30963b6336ff" />
+
 - Kiểm tra xem Apache đang chạy:
 
 Mở trình duyệt → gõ:
