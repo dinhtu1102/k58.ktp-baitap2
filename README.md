@@ -154,10 +154,6 @@ DocumentRoot "E:/Apache24/nguyendinhtu"
     Require all granted
 </Directory>
 
-<img width="735" height="332" alt="image" src="https://github.com/user-attachments/assets/943d6bd5-5582-48d4-800f-09e083bff07d" />
-
-<img width="878" height="310" alt="image" src="https://github.com/user-attachments/assets/c7750cd0-b0c2-4f82-a615-abd5ff7179ae" />
-
 Bật module VirtualHost (nếu bị comment):
 
 Tìm dòng:
@@ -186,7 +182,7 @@ Thêm đoạn cấu hình sau (thay fullname bằng tên không dấu liền nha
     CustomLog "logs/nguyendinhtu-access.log" common
 </VirtualHost>
 
-<img width="1032" height="409" alt="image" src="https://github.com/user-attachments/assets/7f2188c9-65c8-4d47-b583-37a080bc18e3" />
+<img width="769" height="239" alt="image" src="https://github.com/user-attachments/assets/b99324df-6269-44f4-8851-adb557fa415e" />
 
 - Tạo thư mục web:
 
@@ -204,12 +200,44 @@ E:\Apache24\nguyendinhtu
 </body>
 </html>
 
+<img width="1177" height="504" alt="image" src="https://github.com/user-attachments/assets/0ae0d787-5813-4f48-8425-00892d120f2e" />
 
+kết quả đạt được
 
+<img width="1567" height="559" alt="image" src="https://github.com/user-attachments/assets/f06e1cf9-2e1f-4535-9162-5f50eddcfbe2" />
 
+Bước 5: Cấu hình file hosts
 
+Mở file:
 
+C:\Windows\System32\drivers\etc\hosts
 
+Chạy Notepad Run as Administrator, rồi thêm dòng sau vào cuối file:
+
+127.0.0.1   nguyendinhtu.com
+
+<img width="1002" height="216" alt="image" src="https://github.com/user-attachments/assets/361ea37e-6b18-4306-ad32-e3d30b94c97d" />
+
+🔹 Bước 6: Cài đặt và khởi động Apache Server
+
+- Mở CMD (Administrator) và chuyển đến thư mục:
+
+cd D:\Apache24\bin
+
+- Cài đặt Apache làm dịch vụ:
+
+httpd.exe -k install
+
+- Khởi động dịch vụ:
+
+httpd.exe -k start
+
+- Kiểm tra xem Apache đang chạy:
+
+Mở trình duyệt → gõ:
+👉 http://doduycop.com
+
+Nếu thấy trang HTML bạn tạo → ✅ thành công!
 
 
 
