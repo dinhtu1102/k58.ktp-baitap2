@@ -156,6 +156,8 @@ DocumentRoot "E:/Apache24/nguyendinhtu"
 
 <img width="735" height="332" alt="image" src="https://github.com/user-attachments/assets/943d6bd5-5582-48d4-800f-09e083bff07d" />
 
+<img width="878" height="310" alt="image" src="https://github.com/user-attachments/assets/c7750cd0-b0c2-4f82-a615-abd5ff7179ae" />
+
 Bật module VirtualHost (nếu bị comment):
 
 Tìm dòng:
@@ -183,6 +185,8 @@ Thêm đoạn cấu hình sau (thay fullname bằng tên không dấu liền nha
     ErrorLog "logs/nguyendinhtu-error.log"
     CustomLog "logs/nguyendinhtu-access.log" common
 </VirtualHost>
+
+<img width="1032" height="409" alt="image" src="https://github.com/user-attachments/assets/7f2188c9-65c8-4d47-b583-37a080bc18e3" />
 
 - Tạo thư mục web:
 
