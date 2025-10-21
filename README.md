@@ -260,14 +260,20 @@ Nếu thấy trang HTML bạn tạo → ✅ thành công!
     copy nssm.exe vào thư mục `D:\nodejs\nodered\`
 <img width="1022" height="405" alt="image" src="https://github.com/user-attachments/assets/14bc17cd-0383-4ced-ab08-0d1e51cc827d" />
    + tạo file "D:\nodejs\nodered\run-nodered.cmd" với nội dung (5 dòng sau):
+
 @echo off
 REM fix path
 set PATH=D:\nodejs;%PATH%
 REM Run Node-RED
 node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %*
-  + mở cmd, chuyển đến thư mục: `D:\nodejs\nodered`
+<img width="988" height="179" alt="Screenshot 2025-10-21 201419" src="https://github.com/user-attachments/assets/9e25b96c-96fe-48ce-9a10-786ff78e903a" />
+  + mở cmd, chuyển đến thư mục: `D:\nodejs\nodered`/
   + cài đặt service `a1-nodered` bằng lệnh: nssm.exe install a1-nodered "D:\nodejs\nodered\run-nodered.cmd"
+  <img width="861" height="98" alt="Screenshot 2025-10-21 201601" src="https://github.com/user-attachments/assets/6f54c380-208b-408b-9112-c9898476eb7b" />
   + chạy service `a1-nodered` bằng lệnh: `nssm start a1-nodered`
+<img width="703" height="136" alt="Screenshot 2025-10-21 201755" src="https://github.com/user-attachments/assets/fd882b5f-23a3-4250-945a-e7e212ed3a39" />
+kết quả đạt được 
+<img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/d0dfd218-ca44-43de-8f39-01b56adc3a07" />
 
 
 
