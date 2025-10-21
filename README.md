@@ -237,11 +237,37 @@ httpd.exe -k start
 - Kiểm tra xem Apache đang chạy:
 
 Mở trình duyệt → gõ:
-👉 http://doduycop.com
+👉 [http://doduycop.com](http://nguyendinhtu.com/)
+
+<img width="1602" height="577" alt="image" src="https://github.com/user-attachments/assets/ed44d338-77b9-4e6c-8001-4c09fa8ff7e6" />
 
 Nếu thấy trang HTML bạn tạo → ✅ thành công!
 
 
+2.2. Cài đặt nodejs và nodered => Dùng làm backend:
+- Cài đặt nodejs:
+  + download file `https://nodejs.org/dist/v20.19.5/node-v20.19.5-x64.msi`  (đây ko phải bản mới nhất, nhưng ổn định)
+<img width="1094" height="115" alt="image" src="https://github.com/user-attachments/assets/f08f1c7b-3a48-486d-8a7e-5a0425ff1865" />
+   + cài đặt vào thư mục `D:\nodejs`
+<img width="773" height="96" alt="image" src="https://github.com/user-attachments/assets/deef6cb7-aa46-48a1-b408-f3ebe390312c" />
+- Cài đặt nodered:
+  + chạy cmd, vào thư mục `D:\nodejs`, chạy lệnh `npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered"`
+<img width="975" height="317" alt="image" src="https://github.com/user-attachments/assets/4afaf364-0295-43c9-9500-864d63f0fe99" />
+   + download file: https://nssm.cc/release/nssm-2.24.zip
+<img width="875" height="114" alt="image" src="https://github.com/user-attachments/assets/561569fa-5f6e-48f6-a578-2e7869b87db5" />
+     giải nén được file nssm.exe
+  <img width="844" height="118" alt="image" src="https://github.com/user-attachments/assets/469ced3c-a26e-43c4-9003-889e5b8b08c1" />
+    copy nssm.exe vào thư mục `D:\nodejs\nodered\`
+<img width="1022" height="405" alt="image" src="https://github.com/user-attachments/assets/14bc17cd-0383-4ced-ab08-0d1e51cc827d" />
+   + tạo file "D:\nodejs\nodered\run-nodered.cmd" với nội dung (5 dòng sau):
+@echo off
+REM fix path
+set PATH=D:\nodejs;%PATH%
+REM Run Node-RED
+node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %*
+  + mở cmd, chuyển đến thư mục: `D:\nodejs\nodered`
+  + cài đặt service `a1-nodered` bằng lệnh: nssm.exe install a1-nodered "D:\nodejs\nodered\run-nodered.cmd"
+  + chạy service `a1-nodered` bằng lệnh: `nssm start a1-nodered`
 
 
 
@@ -250,23 +276,5 @@ Nếu thấy trang HTML bạn tạo → ✅ thành công!
 
 
 
-
-- Vô hiệu hoá IIS: nếu iis đang chạy thì mở cmd quyền admin để chạy lệnh: iisreset /stop
-
-- Download apache server, giải nén ra ổ D, cấu hình các file:
-
-  + D:\Apache24\conf\httpd.conf
-  
-  + D:Apache24\conf\extra\httpd-vhosts.conf
-  
-  để tạo website với domain: fullname.com
-  
-  code web sẽ đặt tại thư mục: `D:\Apache24\fullname` (fullname ko dấu, liền nhau)
-  
-- sử dụng file `c:\WINDOWS\SYSTEM32\Drivers\etc\hosts` để fake ip 127.0.0.1 cho domain này
-
-  ví dụ sv tên là: `Đỗ Duy Cốp` thì tạo website với domain là fullname ko dấu, liền nhau: `doduycop.com`
-  
-- thao tác dòng lệnh trên file `D:\Apache24\bin\httpd.exe` với các tham số `-k install` và `-k start` để cài đặt và khởi động web server apache.
-
+-
 
