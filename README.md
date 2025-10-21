@@ -277,6 +277,33 @@ kết quả đạt được
 
 
 
+2.3. Tạo csdl tuỳ ý trên mssql (sql server 2022), nhớ các thông số kết nối: ip, port, username, password, db_name, table_name
+
+
+
+2.4. Cài đặt thư viện trên nodered:
+- truy cập giao diện nodered bằng url: http://localhost:1880
+<img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/5fefd97c-cc2e-4352-b34e-1d2197c690fd" />
+- cài đặt các thư viện: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-telegrambot, node-red-contrib-moment, node-red-contrib-influxdb, node-red-contrib-duckdns, node-red-contrib-cron-plus
+<img width="1911" height="714" alt="image" src="https://github.com/user-attachments/assets/832b6cda-3be9-4459-a45d-db0783fa54d4" />
+- Sửa file `D:\nodejs\nodered\work\settings.js` : 
+  tìm đến chỗ adminAuth, bỏ comment # ở đầu dòng (8 dòng), thay chuỗi mã hoá mật khẩu bằng chuỗi mới
+    adminAuth: {
+        type: "credentials",
+        users: [{
+            username: "admin",
+            password: "chuỗi_mã_hoá_mật_khẩu",
+            permissions: "*"
+        }]
+    },   
+    <img width="995" height="302" alt="image" src="https://github.com/user-attachments/assets/4d717a9e-ec6d-4e31-89bf-50cc25ec8f99" />
+   với mã hoá mật khẩu có thể thiết lập bằng tool: https://tms.tnut.edu.vn/pw.php
+- chạy lại nodered bằng cách: mở cmd, vào thư mục `D:\nodejs\nodered` và chạy lệnh `nssm restart a1-nodered`
+<img width="595" height="130" alt="image" src="https://github.com/user-attachments/assets/de7750d0-2267-417a-90c0-60dc06fc94bb" />
+  khi đó nodered sẽ yêu cầu nhập mật khẩu mới vào được giao diện cho admin tại: http://localhost:1880
+<img width="1112" height="696" alt="image" src="https://github.com/user-attachments/assets/c59cd183-f229-45c4-928f-b98a73dfbaa5" />
+
+
 
 
 
