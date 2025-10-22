@@ -274,13 +274,8 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 <img width="703" height="136" alt="Screenshot 2025-10-21 201755" src="https://github.com/user-attachments/assets/fd882b5f-23a3-4250-945a-e7e212ed3a39" />
 kết quả đạt được 
 <img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/d0dfd218-ca44-43de-8f39-01b56adc3a07" />
-
-
-
 2.3. Tạo csdl tuỳ ý trên mssql (sql server 2022), nhớ các thông số kết nối: ip, port, username, password, db_name, table_name
-
-
-
+<img width="1302" height="648" alt="image" src="https://github.com/user-attachments/assets/1cc61c2a-fc84-4ab2-a390-1c6fe818639c" />
 2.4. Cài đặt thư viện trên nodered:
 - truy cập giao diện nodered bằng url: http://localhost:1880
 <img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/5fefd97c-cc2e-4352-b34e-1d2197c690fd" />
@@ -302,12 +297,16 @@ kết quả đạt được
 <img width="595" height="130" alt="image" src="https://github.com/user-attachments/assets/de7750d0-2267-417a-90c0-60dc06fc94bb" />
   khi đó nodered sẽ yêu cầu nhập mật khẩu mới vào được giao diện cho admin tại: http://localhost:1880
 <img width="1112" height="696" alt="image" src="https://github.com/user-attachments/assets/c59cd183-f229-45c4-928f-b98a73dfbaa5" />
+2.5. tạo api back-end bằng nodered:
+- tại flow1 trên nodered, sử dụng node `http in` và `http response` để tạo api
+<img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/9dc3b925-bb53-41cf-8639-835c644217ff" />
+- thêm node `MSSQL` để truy vấn tới cơ sở dữ liệu
+- logic flow sẽ gồm 4 node theo thứ tự sau (thứ tự nối dây): 
+  1. http in  : dùng GET cho đơn giản, URL đặt tuỳ ý, ví dụ: /timkiem
+  2. function : để tiền xử lý dữ liệu gửi đến
+  3. MSSQL: để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
+  4. http response: để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
+  có thể thêm node `debug` để quan sát giá trị trung gian.
+  <img width="1787" height="978" alt="image" src="https://github.com/user-attachments/assets/2bab294e-0337-40e3-92b6-a8723ed7bd48" />
 
-
-
-
-
-
-
--
-
+- test api thông qua trình duyệt, ví dụ: http://localhost:1880/timkiem?q=thị
