@@ -1,4 +1,4 @@
-<img width="1399" height="1117" alt="image" src="https://github.com/user-attachments/assets/d19fde25-b30a-45d1-a1cf-2699bd96940c" /># Nguyễn Đình Tú , k225480106067
+# Nguyễn Đình Tú , k225480106067
 # k58.ktp-baitap2
 nội dung bài tập  hai
 
