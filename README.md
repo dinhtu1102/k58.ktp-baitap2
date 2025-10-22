@@ -333,8 +333,12 @@ port
 - fullname.js: lấy dữ liệu trên form, gửi đến api nodered đã làm ở bước 2.5, nhận về json, dùng json trả về để tạo giao diện phù hợp với kết quả truy vấn của bạn.
 * code js
 <img width="1399" height="1117" alt="image" src="https://github.com/user-attachments/assets/5b87e705-f3e8-46b4-8098-da0b9290e04f" />
-
+* kết quả đạt được
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9c33fb9f-9a67-401b-8dae-eabe35a4898d" />
 2.7. Nhận xét bài làm của mình:
 - đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
+Trong quá trình thực hành, em đã hiểu rõ các bước cài đặt phần mềm và thư viện: từ việc tải đúng phiên bản, cấu hình đường dẫn môi trường, đến cài đặt các gói phụ thuộc bằng npm hoặc pip. Em cũng đã biết cách xử lý các lỗi phát sinh trong quá trình cài đặt và xác nhận phần mềm hoạt động đúng sau khi hoàn tất.
 - đã hiểu cách sử dụng nodered để tạo api back-end như nào?
+Qua quá trình thực hành, em đã hiểu rõ cách sử dụng Node-RED để xây dựng API backend. Cụ thể, em biết cách tạo endpoint bằng node HTTP In, xử lý dữ liệu và truy vấn SQL trong node Function và MSSQL, sau đó trả kết quả về client bằng node HTTP Response. Em cũng hiểu cách debug và triển khai flow để API hoạt động ổn định.
 - đã hiểu cách frond-end tương tác với back-end ra sao?
+Em đã hiểu cách front-end tương tác với back-end thông qua các API. Khi người dùng thao tác trên giao diện, front-end sẽ gửi yêu cầu (request) đến back-end, back-end xử lý dữ liệu và trả về kết quả (response) để hiển thị lại trên giao diện.
