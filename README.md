@@ -1,4 +1,4 @@
-# Nguyễn Đình Tú , k225480106067
+<img width="1399" height="1117" alt="image" src="https://github.com/user-attachments/assets/d19fde25-b30a-45d1-a1cf-2699bd96940c" /># Nguyễn Đình Tú , k225480106067
 # k58.ktp-baitap2
 nội dung bài tập  hai
 
@@ -275,7 +275,16 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 kết quả đạt được 
 <img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/d0dfd218-ca44-43de-8f39-01b56adc3a07" />
 2.3. Tạo csdl tuỳ ý trên mssql (sql server 2022), nhớ các thông số kết nối: ip, port, username, password, db_name, table_name
-<img width="1302" height="648" alt="image" src="https://github.com/user-attachments/assets/1cc61c2a-fc84-4ab2-a390-1c6fe818639c" />
+- tạo database
+<img width="753" height="474" alt="image" src="https://github.com/user-attachments/assets/ad2cd907-f395-44fa-9ade-cca58efbeb5a" />
+- data
+<img width="790" height="719" alt="image" src="https://github.com/user-attachments/assets/16824cae-226b-4fd7-84c0-0015b174a4a9" />
+- username
+<img width="960" height="439" alt="image" src="https://github.com/user-attachments/assets/30e895f2-413b-475f-899b-101fb9ed26f5" />
+- ip
+<img width="1472" height="750" alt="image" src="https://github.com/user-attachments/assets/a10b4331-4a15-4117-a7fd-db426cd59e92" />
+port
+<img width="1011" height="723" alt="image" src="https://github.com/user-attachments/assets/62cb5a0a-79b5-4a70-951d-ba8096475638" />
 2.4. Cài đặt thư viện trên nodered:
 - truy cập giao diện nodered bằng url: http://localhost:1880
 <img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/5fefd97c-cc2e-4352-b34e-1d2197c690fd" />
@@ -308,5 +317,24 @@ kết quả đạt được
   4. http response: để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
   có thể thêm node `debug` để quan sát giá trị trung gian.
   <img width="1787" height="978" alt="image" src="https://github.com/user-attachments/assets/2bab294e-0337-40e3-92b6-a8723ed7bd48" />
-
 - test api thông qua trình duyệt, ví dụ: http://localhost:1880/timkiem?q=thị
+  <img width="1854" height="972" alt="image" src="https://github.com/user-attachments/assets/acf9d9c9-67b5-442f-87a9-e2120c920b0b" />
+  <img width="451" height="334" alt="image" src="https://github.com/user-attachments/assets/e39c3140-8435-4917-b07c-b41d2a846726" />
+2.6. Tạo giao diện front-end:
+- html form gồm các file : index.html, fullname.js, fullname.css
+  cả 3 file này đặt trong thư mục: `D:\Apache24\fullname`
+  nhớ thay fullname là tên của bạn, viết liền, ko dấu, chữ thường, vd tên là Đỗ Duy Cốp thì fullname là `doduycop`
+  khi đó 3 file sẽ là: index.html, doduycop.js và doduycop.css
+- index.html và fullname.css: trang trí tuỳ ý, có dấu ấn cá nhân, có form nhập được thông tin.
+  * html
+<img width="1179" height="819" alt="image" src="https://github.com/user-attachments/assets/749a29ac-528f-42b3-935b-04ce6582ed5c" />
+* code css
+<img width="1412" height="1118" alt="image" src="https://github.com/user-attachments/assets/f0f75150-48f2-4fc2-91c5-ec848aae60b3" />
+- fullname.js: lấy dữ liệu trên form, gửi đến api nodered đã làm ở bước 2.5, nhận về json, dùng json trả về để tạo giao diện phù hợp với kết quả truy vấn của bạn.
+* code js
+<img width="1399" height="1117" alt="image" src="https://github.com/user-attachments/assets/5b87e705-f3e8-46b4-8098-da0b9290e04f" />
+
+2.7. Nhận xét bài làm của mình:
+- đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
+- đã hiểu cách sử dụng nodered để tạo api back-end như nào?
+- đã hiểu cách frond-end tương tác với back-end ra sao?
